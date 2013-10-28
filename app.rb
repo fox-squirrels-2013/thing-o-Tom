@@ -1,5 +1,7 @@
+require 'rubygems'
 require 'sinatra'
+require 'shotgun'
 
-get '/hi' do
-  "Hello World!"
+get '/' do
+  erb :index
 end
