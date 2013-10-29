@@ -1,7 +1,9 @@
+Type in a player's name to add them.
+
 <section id="add">
   <form action="/players" method="post">
     <textarea name="player_name" placeholder="Player list"></textarea>
-    <input type="submit" value="woo">
+    <input type="submit" value="add">
   </form>
 </section>
 
@@ -11,3 +13,12 @@
   <% end %>
 </p>
 
+<!-- Go to the <a href="/players">players</a> page to see all the players. -->
+
+<!-- Type in an id number to edit a player -->
+
+<h2>Remove player</h2>
+<form action="/destroy" method="post">
+  <textarea name="id" placeholder="Player list"></textarea>
+  <input type="submit" value="delete">
+</form>   

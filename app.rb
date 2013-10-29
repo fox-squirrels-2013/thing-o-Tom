@@ -18,9 +18,22 @@ post '/players' do
   # puts params
   p params[:player_name]
   Player.create(name: params[:player_name])
+  @players = Player.all
   erb :players
   end
 
 get '/view' do
 
+end
+
+get '/destroy' do
+  @players = Player.all
+  erb :players
+  end
+
+post '/destroy' do
+  p params
+  Player.find(params[:id]).destroy
+  @players = Player.all
+  erb :players
 end
