@@ -11,4 +11,10 @@ namespace :db do
   task :drop do
     `dropdb sinatra_skeleton_dev`
   end
+
+  desc "seed the database"
+  task :seed do
+    Seeds.run
+  end
 end
+
