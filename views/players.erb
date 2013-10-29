@@ -1,0 +1,13 @@
+<section id="add">
+  <form action="/players" method="post">
+    <textarea name="player_name" placeholder="Player list"></textarea>
+    <input type="submit" value="woo">
+  </form>
+</section>
+
+<p>
+  <% @players.each do |player|%>
+  <%= "#{player.id}, #{player.name}, #{player.number}, #{player.position}" %> </br>
+  <% end %>
+</p>
+
